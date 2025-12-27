@@ -1,1 +1,65 @@
+##MATLAB Modeling of Rankine and Brayton Power Cycles
+#Overview
 
+This repository contains MATLAB implementations of the Rankine and Brayton thermodynamic power cycles developed entirely from first principles. The models compute all thermodynamic state points, evaluate cycle performance, incorporate non-ideal effects, and perform parametric studies to provide engineering insight into real power systems.
+No prebuilt cycle simulators or external property libraries are used. All calculations are implemented using fundamental thermodynamic relations and tabulated property data.
+
+#Objectives
+
+Compute all thermodynamic state points of Rankine and Brayton cycles
+Evaluate turbine work, pump/compressor work, net work output, and thermal efficiency
+Study the impact of non-ideal component efficiencies
+Perform parametric studies to understand design trade-offs
+Generate physically meaningful thermodynamic plots
+
+#Rankine Cycle Model
+
+Modeling Assumptions:-
+
+Steady-state, steady-flow operation
+Negligible kinetic and potential energy changes
+Water/steam as the working fluid
+Constant-pressure heat addition (boiler) and heat rejection (condenser)
+Turbine inlet temperature specified as an input
+Steam properties obtained from saturation tables with interpolation
+Superheated steam modeled using constant specific heat relations
+Both ideal (isentropic pump and turbine) and real cycles are modeled by incorporating pump and turbine isentropic efficiencies.
+
+Key Results:-
+
+Turbine work is significantly larger than pump work, resulting in a low back-work ratio, characteristic of steam power plants
+Isentropic efficiencies reduce net work output and thermal efficiency due to irreversibilities
+Thermal efficiency increases with boiler pressure due to a higher average temperature of heat addition
+Efficiency improvement diminishes at high boiler pressures because of increased pump work and moisture content at turbine exit
+These results explain practical limits on boiler pressure in real Rankine cycle power plants.
+
+#Brayton Cycle Model
+
+Modeling Assumptions:-
+
+Simple open Brayton cycle
+Air modeled as an ideal gas
+Constant-pressure heat addition and rejection
+Initial model assumes constant specific heats
+Extended model includes compressor and turbine isentropic efficiencies
+Further extension incorporates temperature-dependent specific heat
+Pressure ratio and turbine inlet temperature treated as primary inputs
+
+Key Results:-
+
+Thermal efficiency increases monotonically with pressure ratio in the ideal cycle
+Net work output exhibits a maximum at an intermediate pressure ratio
+Component inefficiencies significantly reduce net work and efficiency
+Variable specific heat modeling predicts lower performance than constant-specific heat models, especially at high turbine inlet temperatures
+A large fraction of turbine work is consumed by the compressor, highlighting a fundamental limitation of gas turbine systems
+
+Effect of Altitude:-
+Altitude is modeled as a reduction in inlet pressure. Lower inlet pressure decreases air density and mass flow rate, resulting in:
+Significant reduction in net power output
+Slight reduction in thermal efficiency
+This behavior explains the performance degradation of gas turbines at high altitudes and motivates advanced compressor and inlet designs in aerospace applications.
+
+#Conclusion
+
+The MATLAB models accurately capture the thermodynamic behavior of Rankine and Brayton cycles under ideal and non-ideal conditions. The Rankine cycle demonstrates high efficiency with a low back-work ratio, making it suitable for large-scale power generation. The Brayton cycle shows strong sensitivity to pressure ratio, component efficiencies, and inlet conditions, which is critical for gas turbine and aerospace applications.
+Parametric studies provide valuable insight into optimal operating ranges and real-world design constraints.
