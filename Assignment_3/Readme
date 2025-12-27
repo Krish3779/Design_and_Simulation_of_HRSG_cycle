@@ -1,7 +1,8 @@
 ##MATLAB Modeling of Rankine and Brayton Power Cycles
+
 #Overview
 
-This repository contains MATLAB implementations of the Rankine and Brayton thermodynamic power cycles developed entirely from first principles. The models compute all thermodynamic state points, evaluate cycle performance, incorporate non-ideal effects, and perform parametric studies to provide engineering insight into real power systems.
+This assignment contains MATLAB implementations of the Rankine and Brayton thermodynamic power cycles developed entirely from first principles. The models compute all thermodynamic state points, evaluate cycle performance, incorporate non-ideal effects, and perform parametric studies to provide engineering insight into real power systems.
 No prebuilt cycle simulators or external property libraries are used. All calculations are implemented using fundamental thermodynamic relations and tabulated property data.
 
 #Objectives
